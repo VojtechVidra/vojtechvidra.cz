@@ -24,6 +24,7 @@ export default function Home() {
           <STimeline>
             {timelineData.map((item) => (
               <TimelineItem
+                key={item.title}
                 title={item.title}
                 date={item.date}
                 icon={item.icon}

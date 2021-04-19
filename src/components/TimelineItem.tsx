@@ -24,7 +24,6 @@ export const TimelineItem = ({ date, icon, text, title }: Props) => {
 
 const SWrapper = styled.div`
   display: flex;
-  gap: ${spacing()}px;
   margin-bottom: ${spacing(3)}px;
 `;
 
@@ -32,6 +31,7 @@ const SIconWrapper = styled.div`
   margin: 2px 0;
   font-size: 20px;
   line-height: 20px;
+  margin-right: ${spacing()}px;
 `;
 
 const SH2 = styled.h2`
