@@ -1,6 +1,13 @@
 export const timelineData = [
   {
-    title: "Launched konecpandemie.cz",
+    title: (
+      <>
+        Launched{" "}
+        <a href="https://konecpandemie.cz/" target="_blank">
+          konecpandemie.cz
+        </a>
+      </>
+    ),
     date: "2021",
     text:
       "With a couple of friends I created dashboard for tracking vaccination in Czech Republic",

@@ -37,6 +37,10 @@ const SIconWrapper = styled.div`
 const SH2 = styled.h2`
   color: ${color("neutrals", "black")};
   ${font("h4")}
+
+  a {
+    color: ${color("primary", "primary")};
+  }
 `;
 
 const SDate = styled.p`
