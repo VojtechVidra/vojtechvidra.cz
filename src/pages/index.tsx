@@ -22,9 +22,9 @@ export default function Home() {
           </SPerex>
 
           <STimeline>
-            {timelineData.map((item) => (
+            {timelineData.map((item, i) => (
               <TimelineItem
-                key={item.title}
+                key={i}
                 title={item.title}
                 date={item.date}
                 icon={item.icon}
