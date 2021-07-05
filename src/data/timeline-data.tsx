@@ -9,8 +9,7 @@ export const timelineData = [
       </>
     ),
     date: "2021",
-    text:
-      "With a couple of friends I created dashboard for tracking vaccination in Czech Republic",
+    text: "With a couple of friends I created dashboard for tracking vaccination in Czech Republic",
     icon: <img src="/syringe.svg" />,
   },
   {
@@ -30,9 +29,8 @@ export const timelineData = [
   {
     title: "Joined EMU",
     date: "2019",
-    text:
-      "I joined Employee Mood Up as a Jr. Frontend engineer. Best thing was working from the hearth of Prague, Wratislaw Palace",
-    icon: <img src="/emu.png" />,
+    text: "I joined Employee Mood Up as a Jr. Frontend engineer. Best thing was working from the hearth of Prague, Wratislaw Palace",
+    icon: <img src="/emu.svg" />,
   },
   {
     title: "Jr. Frontend engineer at Starky’s Club",
@@ -51,8 +49,7 @@ export const timelineData = [
   {
     title: "Graduated High School",
     date: "2018",
-    text:
-      "I graduated Secondary Technical School of Engineering with focus on IT",
+    text: "I graduated Secondary Technical School of Engineering with focus on IT",
     icon: "🎓",
   },
   {
@@ -61,7 +58,7 @@ export const timelineData = [
     text: (
       <>
         I created first WordPress website{" "}
-        <a href="https://www.starkysclub.com/" target="_blank">
+        <a href="https://pereny.cz/" target="_blank">
           pereny.cz
         </a>
       </>

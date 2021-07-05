@@ -8,7 +8,7 @@ export const Menu = () => {
     <SWrapper>
       <SHeader>
         <SContainer>
-          <Link href="/">
+          <Link href="/" passHref>
             <SBrandLink>vojtechvidra.cz</SBrandLink>
           </Link>
           {/* <nav>

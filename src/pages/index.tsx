@@ -15,7 +15,7 @@ export default function Home() {
 
       <Container>
         <main>
-          <SH1>Hey, I'm Vojta,</SH1>
+          <SH1>Hey, I&apos;m Vojta,</SH1>
           <SPerex>
             web developer from Prague, Czech Republic. I’m working mainly with
             React and TypeScript, but I enjoy everything JavaScript related.

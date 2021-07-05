@@ -7,7 +7,7 @@ import {
 const STheme: DefaultTheme = {
   palette: {
     primary: {
-      primary: "#166448",
+      primary: "#007a56",
     },
     neutrals: {
       black: "#222222",
@@ -69,43 +69,48 @@ interface ComponentProps {
   theme: DefaultTheme;
 }
 
-export const spacing = (coefficient = 1, offset = 0) => ({
-  theme,
-}: ComponentProps) => theme.spacing(coefficient) + offset;
+export const spacing =
+  (coefficient = 1, offset = 0) =>
+  ({ theme }: ComponentProps) =>
+    theme.spacing(coefficient) + offset;
 
-export const color = <
-  T extends keyof DefaultTheme["palette"],
-  C extends keyof DefaultTheme["palette"][T]
->(
-  type: T,
-  color: C
-) => ({ theme }: ComponentProps) => theme.palette[type][color];
+export const color =
+  <
+    T extends keyof DefaultTheme["palette"],
+    C extends keyof DefaultTheme["palette"][T]
+  >(
+    type: T,
+    color: C
+  ) =>
+  ({ theme }: ComponentProps) =>
+    theme.palette[type][color];
 
-export const mobile = (styles: ReturnType<typeof css>) => ({
-  theme,
-}: ComponentProps) => css`
-  @media (max-width: ${theme.mobileBr}px) {
-    ${styles}
-  }
-`;
+export const mobile =
+  (styles: ReturnType<typeof css>) =>
+  ({ theme }: ComponentProps) =>
+    css`
+      @media (max-width: ${theme.mobileBr}px) {
+        ${styles}
+      }
+    `;
 
-export const font = (size: keyof DefaultTheme["fonts"]) => ({
-  theme,
-}: ComponentProps) => {
-  const fontDefinition = theme.fonts[size];
-  return css`
-    font-size: ${fontDefinition.size}px;
-    line-height: ${fontDefinition.lineHeight}px;
-    font-weight: ${fontDefinition.weigth};
-    margin: 0;
+export const font =
+  (size: keyof DefaultTheme["fonts"]) =>
+  ({ theme }: ComponentProps) => {
+    const fontDefinition = theme.fonts[size];
+    return css`
+      font-size: ${fontDefinition.size}px;
+      line-height: ${fontDefinition.lineHeight}px;
+      font-weight: ${fontDefinition.weigth};
+      margin: 0;
 
-    ${mobile(css`
-      font-size: ${fontDefinition.mobileSize
-        ? `${fontDefinition.mobileSize}px`
-        : undefined};
-      line-height: ${fontDefinition.mobileLineHeight
-        ? `${fontDefinition.mobileLineHeight}px`
-        : undefined};
-    `)}
-  `;
-};
+      ${mobile(css`
+        font-size: ${fontDefinition.mobileSize
+          ? `${fontDefinition.mobileSize}px`
+          : undefined};
+        line-height: ${fontDefinition.mobileLineHeight
+          ? `${fontDefinition.mobileLineHeight}px`
+          : undefined};
+      `)}
+    `;
+  };
