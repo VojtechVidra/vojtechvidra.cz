@@ -1,5 +1,5 @@
 import { Menu } from "components/Menu";
-import { NextWebVitalsMetric } from "next/dist/next-server/lib/utils";
+import type { NextWebVitalsMetric } from "next/app";
 import { GlobalStyle } from "styles/GlobalStyle";
 import { ThemeProvider } from "styles/theme";
 
