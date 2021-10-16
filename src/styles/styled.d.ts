@@ -12,7 +12,8 @@ declare module "styled-components" {
   export interface DefaultTheme {
     palette: {
       primary: {
-        primary: string;
+        text: string;
+        textHover: string;
       };
       neutrals: {
         white: string;

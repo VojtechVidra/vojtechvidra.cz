@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
@@ -47,6 +47,11 @@ export default class MyDocument extends Document {
             gtag('config', '${GA_TRACKING_ID}');
           `,
             }}
+          />
+
+          <meta
+            name="description"
+            content="Front-end developer, building SaaS for designers on the side"
           />
         </Head>
         <body>

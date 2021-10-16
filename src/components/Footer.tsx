@@ -40,5 +40,5 @@ const SLink = styled.a`
   color: ${color("neutrals", "grey")};
   display: inline-block;
 
-  ${font("body")}
+  ${font("label")}
 `;

@@ -23,7 +23,8 @@ export const TimelineItem = ({ date, icon, text, title }: Props) => {
 };
 
 const SWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 28px 1fr;
   margin-bottom: ${spacing(3)}px;
 `;
 
@@ -39,7 +40,11 @@ const SH2 = styled.h2`
   ${font("h4")}
 
   a {
-    color: ${color("primary", "primary")};
+    color: ${color("primary", "text")};
+    transition: 0.1s;
+    :hover {
+      color: ${color("primary", "textHover")};
+    }
   }
 `;
 
@@ -54,6 +59,11 @@ const SText = styled.p`
   ${font("body")}
 
   a {
-    color: ${color("primary", "primary")};
+    color: ${color("primary", "text")};
+    ${font("label")}
+    transition: .1s;
+    :hover {
+      color: ${color("primary", "textHover")};
+    }
   }
 `;

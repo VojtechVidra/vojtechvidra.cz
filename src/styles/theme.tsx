@@ -4,10 +4,17 @@ import {
   ThemeProvider as SThemeProvider,
 } from "styled-components";
 
+const green = {
+  400: "#00976b",
+  500: "#007a56",
+  700: "#005238",
+};
+
 const STheme: DefaultTheme = {
   palette: {
     primary: {
-      primary: "#007a56",
+      text: green[500],
+      textHover: green[400],
     },
     neutrals: {
       black: "#222222",
