@@ -40,13 +40,13 @@ export default function Home() {
 }
 
 const SH1 = styled.h1`
-  color: ${color("neutrals", "black")};
+  color: ${color("neutrals.black")};
   ${font("h1")}
   margin-bottom: ${spacing(2)}px;
 `;
 
 const SPerex = styled.p`
-  color: ${color("neutrals", "grey")};
+  color: ${color("neutrals.grey")};
   ${font("perex")}
 
   margin-bottom: ${spacing(4)}px;

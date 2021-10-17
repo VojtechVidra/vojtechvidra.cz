@@ -36,34 +36,34 @@ const SIconWrapper = styled.div`
 `;
 
 const SH2 = styled.h2`
-  color: ${color("neutrals", "black")};
+  color: ${color("neutrals.black")};
   ${font("h4")}
 
   a {
-    color: ${color("primary", "text")};
+    color: ${color("primary.text")};
     transition: 0.1s;
     :hover {
-      color: ${color("primary", "textHover")};
+      color: ${color("primary.textHover")};
     }
   }
 `;
 
 const SDate = styled.p`
-  color: ${color("neutrals", "grey")};
+  color: ${color("neutrals.grey")};
   ${font("footnote")}
   margin-bottom :${spacing()}px;
 `;
 
 const SText = styled.p`
-  color: ${color("neutrals", "grey")};
+  color: ${color("neutrals.grey")};
   ${font("body")}
 
   a {
-    color: ${color("primary", "text")};
+    color: ${color("primary.text")};
     ${font("label")}
     transition: .1s;
     :hover {
-      color: ${color("primary", "textHover")};
+      color: ${color("primary.textHover")};
     }
   }
 `;

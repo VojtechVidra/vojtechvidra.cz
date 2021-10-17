@@ -3,6 +3,7 @@ import {
   DefaultTheme,
   ThemeProvider as SThemeProvider,
 } from "styled-components";
+import { RecursiveKeyOf } from "types";
 
 const green = {
   400: "#00976b",
@@ -82,15 +83,9 @@ export const spacing =
     theme.spacing(coefficient) + offset;
 
 export const color =
-  <
-    T extends keyof DefaultTheme["palette"],
-    C extends keyof DefaultTheme["palette"][T]
-  >(
-    type: T,
-    color: C
-  ) =>
+  (colorKey: RecursiveKeyOf<DefaultTheme["palette"]>) =>
   ({ theme }: ComponentProps) =>
-    theme.palette[type][color];
+    colorKey.split(".").reduce((acc, key) => acc?.[key], theme.palette);
 
 export const mobile =
   (styles: ReturnType<typeof css>) =>

@@ -51,7 +51,7 @@ const SContainer = styled(Container)`
 const SBrandLink = styled.a`
   padding: ${spacing(3)}px ${spacing(2)}px;
   cursor: pointer;
-  color: ${color("neutrals", "black")};
+  color: ${color("neutrals.black")};
   :hover {
     text-decoration: none;
   }

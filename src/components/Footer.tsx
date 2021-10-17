@@ -37,7 +37,7 @@ const SList = styled.ul`
 
 const SLink = styled.a`
   padding: ${spacing()}px;
-  color: ${color("neutrals", "grey")};
+  color: ${color("neutrals.grey")};
   display: inline-block;
 
   ${font("label")}
