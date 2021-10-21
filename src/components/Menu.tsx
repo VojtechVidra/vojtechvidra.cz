@@ -1,9 +1,11 @@
 import { Container } from "components/Container";
 import Link from "next/link";
 import styled from "styled-components";
-import { color, font, spacing } from "styles/theme";
+import { sx } from "styles";
+import useDarkMode from "use-dark-mode";
 
 export const Menu = () => {
+  const { toggle } = useDarkMode();
   return (
     <SWrapper>
       <SHeader>
@@ -11,15 +13,18 @@ export const Menu = () => {
           <Link href="/" passHref>
             <SBrandLink>vojtechvidra.cz</SBrandLink>
           </Link>
-          {/* <nav>
+          <nav>
             <SList>
-              <li>
+              {/* <li>
                 <Link href="/">
                   <SMenuLink>Home</SMenuLink>
                 </Link>
+              </li> */}
+              <li>
+                <SLightbulb onClick={toggle}>💡</SLightbulb>
               </li>
             </SList>
-          </nav> */}
+          </nav>
         </SContainer>
       </SHeader>
     </SWrapper>
@@ -27,18 +32,19 @@ export const Menu = () => {
 };
 
 const SWrapper = styled.div`
-  height: 68px;
-  margin-bottom: ${spacing(5)}px;
+  height: 60px;
+  margin-bottom: ${sx.spacing(5)};
 `;
 
 const SHeader = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
+  transition: 0.12s;
 
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: ${sx.color("neutral.backgroundVerySlightlyTransparent")};
   @supports (backdrop-filter: blur(64px)) {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: ${sx.color("neutral.backgroundSlightlyTransparent")};
     backdrop-filter: blur(64px);
   }
 `;
@@ -49,27 +55,39 @@ const SContainer = styled(Container)`
 `;
 
 const SBrandLink = styled.a`
-  padding: ${spacing(3)}px ${spacing(2)}px;
+  padding: ${sx.spacing(2.5)} ${sx.spacing(2)};
   cursor: pointer;
-  color: ${color("neutrals.black")};
+  color: ${sx.color("neutral.text")};
   :hover {
     text-decoration: none;
   }
 
-  ${font("body")}
+  ${sx.font("body")}
 
-  margin-left: ${spacing(-2)}px;
+  margin-left: ${sx.spacing(-2)};
 `;
 
-// const SList = styled.ul`
-//   margin: 0;
-//   padding: 0;
-//   list-style-type: none;
-//   display: flex;
-// `;
+const SList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  margin-right: ${sx.spacing(-2)};
+`;
 
-// const SMenuLink = styled.a`
-//   display: block;
-//   padding: ${spacing(2)}px;
-//   cursor: pointer;
-// `;
+const SMenuLink = styled.a`
+  display: block;
+  padding: ${sx.spacing(2.5)} ${sx.spacing(2)};
+  color: ${sx.color("neutral.text")};
+  cursor: pointer;
+  ${sx.font("body")}
+`;
+
+const SLightbulb = styled(SMenuLink)`
+  font-size: 28px;
+  line-height: 28px;
+  padding: ${sx.spacing(2)} ${sx.spacing(2)};
+  :hover {
+    text-decoration: none;
+  }
+`;

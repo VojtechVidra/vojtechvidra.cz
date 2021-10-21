@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-import { color, font, spacing } from "styles/theme";
+import { sx } from "styles";
 
 interface Props {
   title: ReactNode;
@@ -25,45 +25,45 @@ export const TimelineItem = ({ date, icon, text, title }: Props) => {
 const SWrapper = styled.div`
   display: grid;
   grid-template-columns: 28px 1fr;
-  margin-bottom: ${spacing(3)}px;
+  margin-bottom: ${sx.spacing(3)};
 `;
 
 const SIconWrapper = styled.div`
   margin: 2px 0;
   font-size: 20px;
   line-height: 20px;
-  margin-right: ${spacing()}px;
+  margin-right: ${sx.spacing()};
 `;
 
 const SH2 = styled.h2`
-  color: ${color("neutrals.black")};
-  ${font("h4")}
+  color: ${sx.color("neutral.text")};
+  ${sx.font("h4")}
 
   a {
-    color: ${color("primary.text")};
+    color: ${sx.color("primary.text")};
     transition: 0.1s;
     :hover {
-      color: ${color("primary.textHover")};
+      color: ${sx.color("primary.textHover")};
     }
   }
 `;
 
 const SDate = styled.p`
-  color: ${color("neutrals.grey")};
-  ${font("footnote")}
-  margin-bottom :${spacing()}px;
+  color: ${sx.color("neutral.textSubtle")};
+  ${sx.font("footnote")}
+  margin-bottom :${sx.spacing()};
 `;
 
 const SText = styled.p`
-  color: ${color("neutrals.grey")};
-  ${font("body")}
+  color: ${sx.color("neutral.textSubtle")};
+  ${sx.font("body")}
 
   a {
-    color: ${color("primary.text")};
-    ${font("label")}
+    color: ${sx.color("primary.text")};
+    ${sx.font("label")}
     transition: .1s;
     :hover {
-      color: ${color("primary.textHover")};
+      color: ${sx.color("primary.textHover")};
     }
   }
 `;

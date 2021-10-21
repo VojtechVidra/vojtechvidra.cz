@@ -10,17 +10,6 @@ interface FontItem {
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    palette: {
-      primary: {
-        text: string;
-        textHover: string;
-      };
-      neutrals: {
-        white: string;
-        grey: string;
-        black: string;
-      };
-    };
     fonts: {
       h1: FontItem;
       h2: FontItem;

@@ -55,6 +55,8 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+          <script src="/noflash.js" />
           <Main />
           <NextScript />
         </body>

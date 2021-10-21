@@ -1,6 +1,6 @@
 import { Container } from "components/Container";
 import styled from "styled-components";
-import { color, font, spacing } from "styles/theme";
+import { sx } from "styles";
 
 export const Footer = () => {
   return (
@@ -22,23 +22,25 @@ export const Footer = () => {
 };
 
 const SFooter = styled.footer`
-  margin-top: ${spacing(8)}px;
+  margin-top: ${sx.spacing(8)};
 `;
 
 const SContainer = styled(Container)`
   border-top: 2px solid #e9e9e9;
-  padding-top: ${spacing(2)}px;
-  padding-bottom: ${spacing(4)}px;
+  padding-top: ${sx.spacing(6)};
+  padding-bottom: ${sx.spacing(6)};
 `;
 
 const SList = styled.ul`
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 `;
 
 const SLink = styled.a`
-  padding: ${spacing()}px;
-  color: ${color("neutrals.grey")};
+  padding: ${sx.spacing()};
+  color: ${sx.color("neutral.textSubtle")};
   display: inline-block;
 
-  ${font("label")}
+  ${sx.font("label")}
 `;

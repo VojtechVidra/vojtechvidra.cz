@@ -1,28 +1,9 @@
 import {
-  css,
   DefaultTheme,
   ThemeProvider as SThemeProvider,
 } from "styled-components";
-import { RecursiveKeyOf } from "types";
-
-const green = {
-  400: "#00976b",
-  500: "#007a56",
-  700: "#005238",
-};
 
 const STheme: DefaultTheme = {
-  palette: {
-    primary: {
-      text: green[500],
-      textHover: green[400],
-    },
-    neutrals: {
-      black: "#222222",
-      grey: "#767676",
-      white: "#ffffff",
-    },
-  },
   fonts: {
     h1: {
       size: 52,
@@ -72,47 +53,3 @@ const STheme: DefaultTheme = {
 export const ThemeProvider = (props: any) => (
   <SThemeProvider theme={STheme} {...props} />
 );
-
-interface ComponentProps {
-  theme: DefaultTheme;
-}
-
-export const spacing =
-  (coefficient = 1, offset = 0) =>
-  ({ theme }: ComponentProps) =>
-    theme.spacing(coefficient) + offset;
-
-export const color =
-  (colorKey: RecursiveKeyOf<DefaultTheme["palette"]>) =>
-  ({ theme }: ComponentProps) =>
-    colorKey.split(".").reduce((acc, key) => acc?.[key], theme.palette);
-
-export const mobile =
-  (styles: ReturnType<typeof css>) =>
-  ({ theme }: ComponentProps) =>
-    css`
-      @media (max-width: ${theme.mobileBr}px) {
-        ${styles}
-      }
-    `;
-
-export const font =
-  (size: keyof DefaultTheme["fonts"]) =>
-  ({ theme }: ComponentProps) => {
-    const fontDefinition = theme.fonts[size];
-    return css`
-      font-size: ${fontDefinition.size}px;
-      line-height: ${fontDefinition.lineHeight}px;
-      font-weight: ${fontDefinition.weigth};
-      margin: 0;
-
-      ${mobile(css`
-        font-size: ${fontDefinition.mobileSize
-          ? `${fontDefinition.mobileSize}px`
-          : undefined};
-        line-height: ${fontDefinition.mobileLineHeight
-          ? `${fontDefinition.mobileLineHeight}px`
-          : undefined};
-      `)}
-    `;
-  };

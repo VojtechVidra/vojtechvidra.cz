@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { spacing } from "styles/theme";
+import { sx } from "styles";
 
 const WIDTH = 744;
 
 export const Container = styled.div`
-  max-width: ${(p) => WIDTH + 2 * spacing(2)(p)}px;
+  max-width: calc(${WIDTH}px + ${sx.spacing(4)});
   width: 100%;
-  padding: 0 ${spacing(2)}px;
+  padding: 0 ${sx.spacing(2)};
   margin: auto;
 `;
