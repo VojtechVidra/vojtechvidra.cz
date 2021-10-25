@@ -1,20 +1,18 @@
 import { Menu } from "components/Menu";
+import { useDarkMode } from "hooks";
 import type { NextWebVitalsMetric } from "next/app";
 import { GlobalStyle } from "styles/GlobalStyle";
 import { ThemeProvider } from "styles/theme";
-import useDarkMode from "use-dark-mode";
 
 export default function MyApp({ Component, pageProps }) {
   useDarkMode();
 
   return (
-    <>
-      <ThemeProvider>
-        <Menu />
-        <Component {...pageProps} />
-        <GlobalStyle />
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <Menu />
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 

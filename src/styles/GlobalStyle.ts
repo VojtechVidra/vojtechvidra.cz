@@ -30,7 +30,7 @@ a {
 .light-mode {
   ${createCssVars(lightColors)}
 }
-.dark-mode{
+.dark-mode {
   ${createCssVars(darkColors)}
 }
 `;

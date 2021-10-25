@@ -33,6 +33,9 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+          <script src="/noflash.min.js" />
+
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -55,8 +58,6 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-          <script src="/noflash.js" />
           <Main />
           <NextScript />
         </body>

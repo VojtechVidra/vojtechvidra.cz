@@ -1,11 +1,17 @@
 import { Container } from "components/Container";
+import { useDarkMode } from "hooks";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { sx } from "styles";
-import useDarkMode from "use-dark-mode";
 
 export const Menu = () => {
-  const { toggle } = useDarkMode();
+  const darkMode = useDarkMode();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <SWrapper>
       <SHeader>
@@ -21,7 +27,9 @@ export const Menu = () => {
                 </Link>
               </li> */}
               <li>
-                <SLightbulb onClick={toggle}>💡</SLightbulb>
+                <SLightbulb onClick={darkMode.toggle}>
+                  {darkMode.value && mounted ? "🌜" : "🌞"}
+                </SLightbulb>
               </li>
             </SList>
           </nav>
@@ -87,6 +95,7 @@ const SLightbulb = styled(SMenuLink)`
   font-size: 28px;
   line-height: 28px;
   padding: ${sx.spacing(2)} ${sx.spacing(2)};
+  user-select: none;
   :hover {
     text-decoration: none;
   }
