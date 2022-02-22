@@ -26,7 +26,7 @@ const SFooter = styled.footer`
 `;
 
 const SContainer = styled(Container)`
-  border-top: 2px solid #e9e9e9;
+  border-top: 2px solid ${sx.color("neutral.backgroundSubtle")};
   padding-top: ${sx.spacing(6)};
   padding-bottom: ${sx.spacing(6)};
 `;

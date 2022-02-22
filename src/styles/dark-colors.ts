@@ -1,16 +1,11 @@
+import { neutral } from "./colors";
 import { percentToHex } from "lib";
-import { Colors } from "styles/types";
+import { Colors } from "./types";
 
 const green = {
   400: "#00976b",
   500: "#007a56",
   700: "#005238",
-};
-
-const neutral = {
-  0: "#fff",
-  300: "#bbb",
-  900: "#222326",
 };
 
 export const darkColors: Colors = {
@@ -20,9 +15,10 @@ export const darkColors: Colors = {
   },
   neutral: {
     background: neutral[900],
+    backgroundSubtle: neutral[675],
     backgroundSlightlyTransparent: neutral[900] + percentToHex(0.4),
     backgroundVerySlightlyTransparent: neutral[900] + percentToHex(0.9),
     text: neutral[0],
-    textSubtle: neutral[300],
+    textSubtle: neutral[250],
   },
 };

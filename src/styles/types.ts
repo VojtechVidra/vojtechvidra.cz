@@ -7,6 +7,7 @@ export type Colors = {
   };
   neutral: {
     background: string;
+    backgroundSubtle: string;
     backgroundSlightlyTransparent: string;
     backgroundVerySlightlyTransparent: string;
     textSubtle: string;
