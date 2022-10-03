@@ -17,6 +17,19 @@ export const timelineData = [
   {
     title: (
       <>
+        Joined{" "}
+        <a href="https://www.timeisltd.com/" target="_blank" rel="noreferrer">
+          Time is Ltd.
+        </a>
+      </>
+    ),
+    date: "2021",
+    text: "I joined growing czech startup Time is Ltd. as a Frontend Developer. Building frontend applications and visualization on a mission to free people's time.",
+    icon: <img src="/til.svg" alt="Time is Ltd. logo" width={20} height={20} />,
+  },
+  {
+    title: (
+      <>
         Launched{" "}
         <a href="https://konecpandemie.cz/" target="_blank" rel="noreferrer">
           konecpandemie.cz
