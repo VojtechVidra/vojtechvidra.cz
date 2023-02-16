@@ -17,8 +17,9 @@ export default function Home() {
         <main>
           <SH1>Hey, I&apos;m Vojta,</SH1>
           <SPerex>
-            web developer from Prague, Czech Republic. I’m working mainly with
-            React and TypeScript, but I enjoy everything JavaScript related.
+            web developer from Prague, Czech Republic. I love building beautiful
+            UIs in React and Typescript. When I&apos;m not coding, I&apos;m
+            probably riding mountain bikes.
           </SPerex>
 
           <STimeline>

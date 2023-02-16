@@ -24,14 +24,14 @@ export const TimelineItem = ({ date, icon, text, title }: Props) => {
 
 const SWrapper = styled.div`
   display: grid;
-  grid-template-columns: 28px 1fr;
+  grid-template-columns: 32px 1fr;
   margin-bottom: ${sx.spacing(3)};
 `;
 
 const SIconWrapper = styled.div`
   margin: 2px 0;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 24px;
   margin-right: ${sx.spacing()};
 `;
 
