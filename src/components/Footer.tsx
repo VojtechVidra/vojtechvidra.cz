@@ -1,46 +1,30 @@
-import { Container } from "components/Container";
-import styled from "styled-components";
-import { sx } from "styles";
-
 export const Footer = () => {
   return (
-    <SFooter>
-      <SContainer>
-        <SList>
+    <footer className="mt-16">
+      <div className="max-w-3xl m-auto px-4 py-12 border-t-2 border-neutral-backgroundSubtle">
+        <ul>
           <li>
-            <SLink href="https://github.com/VojtechVidra">GitHub</SLink>
+            <a
+              href="https://github.com/VojtechVidra"
+              target="_blank"
+              rel="noreferrer"
+              className="text-label text-neutral-textSubtle p-2 inline-block"
+            >
+              GitHub
+            </a>
           </li>
           <li>
-            <SLink href="https://www.linkedin.com/in/vojt%C4%9Bch-vidra-4b474a10b">
+            <a
+              href="https://www.linkedin.com/in/vojt%C4%9Bch-vidra-4b474a10b"
+              target="_blank"
+              rel="noreferrer"
+              className="text-label text-neutral-textSubtle p-2 inline-block"
+            >
               LinkedIn
-            </SLink>
+            </a>
           </li>
-        </SList>
-      </SContainer>
-    </SFooter>
+        </ul>
+      </div>
+    </footer>
   );
 };
-
-const SFooter = styled.footer`
-  margin-top: ${sx.spacing(8)};
-`;
-
-const SContainer = styled(Container)`
-  border-top: 2px solid ${sx.color("neutral.backgroundSubtle")};
-  padding-top: ${sx.spacing(6)};
-  padding-bottom: ${sx.spacing(6)};
-`;
-
-const SList = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`;
-
-const SLink = styled.a`
-  padding: ${sx.spacing()};
-  color: ${sx.color("neutral.textSubtle")};
-  display: inline-block;
-
-  ${sx.font("label")}
-`;

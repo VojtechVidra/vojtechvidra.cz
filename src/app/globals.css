@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light-mode {
+  --primary-text: #007a56;
+  --primary-textHover: #00976b;
+  --neutral-background: #ffffff;
+  --neutral-backgroundSubtle: #b4b6b4;
+  --neutral-backgroundSlightlyTransparent: #ffffffb2;
+  --neutral-backgroundVerySlightlyTransparent: #fffffff9;
+  --neutral-text: #222322;
+  --neutral-textSubtle: #636463;
+}
+
+.dark-mode {
+  --primary-text: #00976b;
+  --primary-textHover: #007a56;
+  --neutral-background: #222322;
+  --neutral-backgroundSubtle: #4a4b4a;
+  --neutral-backgroundSlightlyTransparent: #22232266;
+  --neutral-backgroundVerySlightlyTransparent: #222322e5;
+  --neutral-text: #ffffff;
+  --neutral-textSubtle: #b4b6b4;
+}
