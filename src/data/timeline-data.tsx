@@ -3,6 +3,16 @@
 export const timelineData = [
   {
     title: (
+      <a href="https://flows.sh" target="_blank" rel="noreferrer">
+        Flows
+      </a>
+    ),
+    date: "2024",
+    icon: <div className="w-6 h-6 bg-[#e86339] rounded-full" />,
+    text: "A better way to onboard users and drive product adoption",
+  },
+  {
+    title: (
       <>
         Launched{" "}
         <a href="http://fig-stats.com" target="_blank" rel="noreferrer">
