@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light-mode">
+    <html lang="en" className="light-mode" suppressHydrationWarning>
       <body className="bg-neutral-background">
         <Header />
         {children}
