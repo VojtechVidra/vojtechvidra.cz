@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import "./globals.css";
-import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Vojtech Vidra",
@@ -14,11 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light-mode" suppressHydrationWarning>
-      <body className="bg-neutral-background">
-        <Header />
-        {children}
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
