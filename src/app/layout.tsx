@@ -5,6 +5,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vojtechvidra.cz"),
+  alternates: {
+    canonical: "./",
+  },
   title: "Vojtech Vidra",
   description: "Front-end developer, building SaaS for designers on the side",
 };
